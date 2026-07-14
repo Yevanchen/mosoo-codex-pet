@@ -1,0 +1,3 @@
+MOSOO_API_BASE=http://127.0.0.1:8787/api/v1
+MOSOO_AGENT_ID=01KXFSWKYZN2YYS3CPKKAJHTF2
+MOSOO_API_TOKEN=replace-with-a-local-agent-access-token

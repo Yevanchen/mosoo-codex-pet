@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fbfbfc" />
+    <meta name="description" content="Turn an avatar into a Codex pet with Mosoo." />
+    <title>Hatch a Codex Pet · Mosoo</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Mosoo home">
+        <img src="/brand/logo-wordmark-onlight.svg" alt="Mosoo" />
+      </a>
+      <span class="eyebrow">Codex Pet Lab</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="kicker"><span></span> Powered by one Mosoo agent</p>
+        <h1 id="page-title">Your avatar,<br />hatched into a pet.</h1>
+        <p class="lede">
+          Drop in one portrait. Mosoo turns it into all nine Codex animation states and packages
+          everything for you.
+        </p>
+      </section>
+
+      <section class="maker" aria-label="Pet maker">
+        <form id="pet-form">
+          <input id="avatar" name="file" type="file" accept="image/png,image/jpeg,image/webp" />
+          <button id="drop-zone" class="drop-zone" type="button">
+            <span class="preview-wrap" aria-hidden="true">
+              <img id="preview" alt="" />
+              <span id="upload-icon" class="upload-icon">↗</span>
+            </span>
+            <span class="drop-title" id="drop-title">Drop an avatar here</span>
+            <span class="drop-copy" id="drop-copy">PNG, JPEG or WebP · up to 10 MB</span>
+          </button>
+          <button id="submit" class="primary" type="submit" disabled>
+            <span>Hatch my pet</span><span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <div id="progress" class="progress" hidden aria-live="polite">
+          <div class="progress-head">
+            <div>
+              <p class="progress-label">Mosoo is working</p>
+              <h2 id="status-title">Getting your pet ready</h2>
+            </div>
+            <span class="spinner" aria-hidden="true"></span>
+          </div>
+          <div class="meter"><i id="meter-fill"></i></div>
+          <p id="status-copy">Uploading the source image…</p>
+        </div>
+
+        <div id="result" class="result" hidden aria-live="polite">
+          <div class="result-mark" aria-hidden="true">✓</div>
+          <div>
+            <p class="progress-label">Ready to move in</p>
+            <h2>Your Codex pet is hatched.</h2>
+            <p>The package includes the spritesheet, manifest and QA files.</p>
+          </div>
+          <a id="download" class="primary" href="#">Download pet.zip <span>↓</span></a>
+        </div>
+
+        <div id="error" class="error" hidden role="alert"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Avatar in. Animated companion out.</span>
+      <a href="https://mosoo.ai" rel="noreferrer">mosoo.ai ↗</a>
+    </footer>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

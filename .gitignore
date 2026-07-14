@@ -1,0 +1,8 @@
+.dev.vars
+.wrangler/
+node_modules/
+dist/
+hatch-pet-mosoo.skill
+worker-configuration.d.ts
+__pycache__/
+*.py[cod]
