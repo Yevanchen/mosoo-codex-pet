@@ -1,6 +1,22 @@
-# Mosoo Codex Pet
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./docs/assets/logo-wordmark-white.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./docs/assets/logo-wordmark.svg">
+    <img alt="Mosoo" src="./docs/assets/logo-wordmark.svg" width="220">
+  </picture>
+</p>
+
+# Codex Pet
 
 Upload one avatar and download a Codex-compatible animated pet. A Cloudflare Worker serves the page and calls one published Mosoo Agent; `MOSOO_API_TOKEN` never reaches the browser.
+
+## Agent as API
+
+Publish a Mosoo Agent once and let any Codex call it. This 57-second demo shows Codex consuming the generated **Instruction for LLM**, integrating the Mosoo Thread API into an existing product backend, and turning one uploaded avatar into a validated pet ZIP.
+
+[![Watch the Mosoo Agent as API demo](./docs/assets/mosoo-agent-as-api-poster.jpg)](./docs/assets/mosoo-agent-as-api.mp4)
+
+[Watch the Agent as API demo →](./docs/assets/mosoo-agent-as-api.mp4)
 
 ```text
 Browser -> Cloudflare Worker -> Mosoo Public Thread API -> Agent sandbox
